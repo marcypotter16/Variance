@@ -3,7 +3,8 @@ import Player from '../models/Player';
 
 class SocketService {
   private socket: Socket | null = null;
-  private serverUrl = 'http://localhost:3001';
+  // private serverUrl = 'http://localhost:3001';
+  private serverUrl = 'https://variance-api-production.up.railway.app'
 
   connect(): Promise<void> {
     return new Promise((resolve, reject) => {
