@@ -110,12 +110,12 @@ export default function Leaderboard() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🏆 Game Over! 🏆</Text>
+      <Text style={styles.title}>Game Over</Text>
       <Text style={styles.subtitle}>{gameTypeText} Mode</Text>
       
       {winner && (
         <View style={styles.winnerSection}>
-          <Text style={styles.winnerText}>🎉 Winner: {winner.nickname}! 🎉</Text>
+          <Text style={styles.winnerText}>Winner: {winner.nickname}! </Text>
           <Text style={styles.winnerScore}>
             Final Score: {winner.score.toFixed(2)} points
           </Text>
@@ -146,7 +146,7 @@ export default function Leaderboard() {
             styles.playAgainButtonText,
             isPlayingAgain && styles.disabledButtonText
           ]}>
-            {isPlayingAgain ? 'Returning to Lobby...' : '🎮 Play Again'}
+            {isPlayingAgain ? 'Returning to Lobby...' : 'Play Again'}
           </Text>
         </TouchableOpacity>
 
@@ -154,7 +154,7 @@ export default function Leaderboard() {
           style={styles.backButton}
           onPress={() => router.replace('/')}
         >
-          <Text style={styles.backButtonText}>🏠 Back to Menu</Text>
+          <Text style={styles.backButtonText}>Back to Menu</Text>
         </TouchableOpacity>
       </View>
     </View>
